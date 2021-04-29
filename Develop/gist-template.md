@@ -1,4 +1,4 @@
-# Title Regex tutorial: email match. 
+# Title Regex tutorial: email match.
 
 The Regex tutorial for beginners.
 
@@ -17,25 +17,21 @@ In simple terms this regex searches and matches with valid email addresses.
 agentalliancela33
 
 2. The second component of this regex is:
-@([\da-z\.-]+) which represents a match the Domain. 
+   @([\da-z\.-]+) which represents a match the Domain.
 
-This matches with @ and any letters, dots, or hyphens.  Using my personal email again as an example this would match with: 
+This matches with @ and any letters, dots, or hyphens. Using my personal email again as an example this would match with:
 
 @gmail.
 
-3. The third component of this regex: )\.([a-z\.]{2,6})$/ matches with the extension. 
+3. The third component of this regex: )\.([a-z\.]{2,6})$/ matches with the extension.
 
 This regex will match with a dot, any letter, and match with any reoccurrence 2-6 times.
 
 using my personal email as an exapmle would return
 
-
 This regex would match with my personal address:
 
-agentalliancela33  @  gmail  .  com
-
-
-
+agentalliancela33 @ gmail . com
 
 ## Table of Contents
 
@@ -77,11 +73,11 @@ Logical “or” is difficult to achieve using tools external to the regular exp
 
 Grouping and alternation are core features of every modern regular expression library. You can provide as many terms as desired, as long as they are separated with the pipe character: |.
 
- This character separates terms contained within each (...) group. Take the following example, for instance:
+This character separates terms contained within each (...) group. Take the following example, for instance:
 
 ^I like (cats|tigers), but not (dogs|wolves).$
 
-you might verbally express this as " I like cats or tigers, but not dogs or wolves. 
+you might verbally express this as " I like cats or tigers, but not dogs or wolves.
 
 This expression will match any of the following strings:
 
@@ -94,7 +90,7 @@ I like tigers, but not wolves.
 
 A character class, also known as a character set, can match with any symbol from a chosen character set.
 
-If you want to match a character set just place the characters you want to match between square brackets []. If you wanted to match "da-z" then you can do that by using [\da-z]. In this example the "\d" would match any digit and "a-z" would specify a and z with the hypen searching for all characters in between. 
+If you want to match a character set just place the characters you want to match between square brackets []. If you wanted to match "da-z" then you can do that by using [\da-z]. In this example the "\d" would match any digit and "a-z" would specify a and z with the hypen searching for all characters in between.
 
 Character classes are one of the most commohly used features of regular expressions.
 
@@ -124,7 +120,6 @@ A Bracket expression are characters that match with a character out of a set of 
 The example matches lowercase a-z and 0-9. Applies to the brackets in all 3 components:
 /^([a-z0-9\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 
-
 ### Greedy and Lazy Match
 
 Greedy quantifiers attempt to repeat sub-patterns before looking for prior shorter matches. Lazy quantifiers are the opposite, they repeate sub-patterns as little as possible and then looking for other matches using expansion. The + symbol in the example code matches the previous token between one and infinity as many times as it can only giving back as needed which is an example of a greedy quantifier.
@@ -145,7 +140,7 @@ If we want to match a pair of opening HTML tags along with text in between the t
 
 ### Look-ahead and Look-behind
 
-Look-ahead and Look-behind can collectively be referred to as Look-arounds and they can be conusing. 
+Look-ahead and Look-behind can collectively be referred to as Look-arounds and they can be conusing.
 
 One confusing thing about Look-arounds is that a look-around is zero-length.
 
